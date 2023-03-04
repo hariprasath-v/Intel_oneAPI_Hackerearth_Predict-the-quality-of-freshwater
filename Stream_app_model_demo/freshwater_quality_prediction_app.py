@@ -22,9 +22,10 @@ def loadModel():
 class_map={1:"Safe to Drink",0:"Not safe to drink"}
 
 
-def explanation_plot(prediction_df,val):
+def explanation_plot(prediction_df,data_df):
   df=prediction_df.drop(['ypred','proba'],axis=1).T.reset_index().rename(columns={'index':'Features',0:'Contribution'}).sort_values(by='Contribution', ascending=True)
-  df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,val)]
+  df=df.merge(data_df,on='Features',how='left')
+  df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,df['Value'].values)]
   df['color']= np.where(df['Contribution']<0, '#f4c000', '#4a628a')
   fig = go.Figure(go.Bar(x=df['Contribution'], y=df['Features'], orientation='h', marker_color=df['color'],
                        text=df['Features'].str.extract('(\w+)'),
@@ -72,6 +73,7 @@ def page1():
                                             chlorine,
                                             manganese,total_dissolved_solids,
                                             water_temperature,air_temperature]
+        data_df=pd.DataFrame({'Features':cols,'Value':val})
         predictor.add_input({i:j for i,j in zip(cols,val)})
         predictor_df=predictor.detail_contributions()
         if predictor_df['ypred'][0]==1:
@@ -81,7 +83,7 @@ def page1():
         with st.expander("View Explanation"):
           tab1, tab2 = st.tabs(['Local Explanation Plot', 'Data'])
           with tab1:
-            st.plotly_chart(explanation_plot(predictor_df,val),sharing ='streamlit',use_container_width=True)
+            st.plotly_chart(explanation_plot(predictor_df,data_df),sharing ='streamlit',use_container_width=True)
           with tab2:
             predictor_df['ypred']=predictor_df['ypred'].map(class_map)
             st.dataframe(predictor_df)
