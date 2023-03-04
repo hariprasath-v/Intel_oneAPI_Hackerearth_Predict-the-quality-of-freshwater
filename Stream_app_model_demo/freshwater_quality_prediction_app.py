@@ -22,7 +22,7 @@ def loadModel():
 class_map={1:"Safe to Drink",0:"Not safe to drink"}
 
 
-def explanation_plot(prediction_df):
+def explanation_plot(prediction_df,val):
   df=prediction_df.drop(['ypred','proba'],axis=1).T.reset_index().rename(columns={'index':'Features',0:'Contribution'}).sort_values(by='Contribution', ascending=True)
   df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,val)]
   df['color']= np.where(df['Contribution']<0, '#f4c000', '#4a628a')
@@ -81,7 +81,7 @@ def page1():
         with st.expander("View Explanation"):
           tab1, tab2 = st.tabs(['Local Explanation Plot', 'Data'])
           with tab1:
-            st.plotly_chart(explanation_plot(predictor_df),sharing ='streamlit',use_container_width=True)
+            st.plotly_chart(explanation_plot(predictor_df,val),sharing ='streamlit',use_container_width=True)
           with tab2:
             predictor_df['ypred']=predictor_df['ypred'].map(class_map)
             st.download_button(
