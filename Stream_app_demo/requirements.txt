@@ -1,8 +1,0 @@
-pandas
-numpy
-catboost
-requests
-shapash
-dill
-matplotlib
-plotly
