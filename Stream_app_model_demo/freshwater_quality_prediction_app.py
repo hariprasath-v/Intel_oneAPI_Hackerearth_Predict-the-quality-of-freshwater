@@ -84,11 +84,12 @@ def page1():
             st.plotly_chart(explanation_plot(predictor_df,val),sharing ='streamlit',use_container_width=True)
           with tab2:
             predictor_df['ypred']=predictor_df['ypred'].map(class_map)
-            st.download_button(
-                    label="Download Detailed Contribution",
-                    data=predictor_df.to_csv(),
-                    file_name=f"Freshwater Qualtiy Prediction Feature Contribution.csv",
-                    mime='text/csv')
+            st.dataframe(predictor_df)
+            #st.download_button(
+                    #label="Download Detailed Contribution",
+                   # data=predictor_df.to_csv(),
+                    #file_name=f"Freshwater Qualtiy Prediction Feature Contribution.csv",
+                    #mime='text/csv')
 
 
 if __name__ == '__main__':
