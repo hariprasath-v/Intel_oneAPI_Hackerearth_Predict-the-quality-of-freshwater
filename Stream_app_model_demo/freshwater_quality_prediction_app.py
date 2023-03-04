@@ -30,8 +30,8 @@ def explanation_plot(prediction_df,val):
                        text=df['Features'].str.extract('(\w+)'),
                         hovertemplate="Feature: %{text}<br>Contribution: %{x}"+"<extra></extra>") )
   fig.update_layout(template='plotly_white', title={'text':f"Local Explanation<br><sub>Response:<b>\
-  {df['ypred'].map(class_map)[0]}</b>\
-  Probability:<b>{df['proba'][0].round(5)}</b>\
+  {prediction_df['ypred'].map(class_map)[0]}</b>\
+  Probability:<b>{prediction_df['proba'][0].round(5)}</b>\
   </sub>", 'x':0.5,'font_size':24},
   font=dict(color='#191414'),
   xaxis=dict(tickfont=dict(size=18 )),
