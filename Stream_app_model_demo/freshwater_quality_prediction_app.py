@@ -3,7 +3,7 @@ import streamlit as st
 from shapash import SmartExplainer
 from shapash.explainer.smart_predictor import SmartPredictor
 from shapash.utils.load_smartpredictor import load_smartpredictor
-import pandas as pandas
+import pandas as pd
 import numpy as np
 import catboost
 import dill
@@ -87,11 +87,11 @@ def page1():
           with tab2:
             predictor_df['ypred']=predictor_df['ypred'].map(class_map)
             st.dataframe(predictor_df)
-            #st.download_button(
-                    #label="Download Detailed Contribution",
-                   # data=predictor_df.to_csv(),
-                    #file_name=f"Freshwater Qualtiy Prediction Feature Contribution.csv",
-                    #mime='text/csv')
+            st.download_button(
+                    label="Download Detailed Contribution",
+                    data=predictor_df.to_csv(),
+                    file_name=f"Freshwater Qualtiy Prediction Feature Contribution.csv",
+                    mime='text/csv')
 
 
 if __name__ == '__main__':
