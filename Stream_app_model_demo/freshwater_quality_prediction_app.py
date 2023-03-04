@@ -24,7 +24,7 @@ class_map={1:"Safe to Drink",0:"Not safe to drink"}
 
 def explanation_plot(prediction_df):
   df=prediction_df.drop(['ypred','proba'],axis=1).T.reset_index().rename(columns={'index':'Features',0:'Contribution'}).sort_values(by='Contribution', ascending=True)
-  df['column']=[f"{i}: {j}" for i, j in zip(df['Features'].values,val)]
+  df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,val)]
   df['color']= np.where(df['Contribution']<0, '#f4c000', '#4a628a')
   fig = go.Figure(go.Bar(x=df['Contribution'], y=df['Features'], orientation='h', marker_color=df['color'],
                        text=df['Features'].str.extract('(\w+)'),
@@ -75,9 +75,9 @@ def page1():
         predictor.add_input({i:j for i,j in zip(cols,val)})
         predictor_df=predictor.detail_contributions()
         if predictor_df['ypred'][0]==1:
-          st.info("<span style='color:green'>Safe to Drink</span>")
+          st.markdown("**:green[Safe to Drink]**")
         elif predictor_df['ypred'][0]==0:
-          st.info("<span style='color:red'>Not Safe to Drink</span>")
+          st.markdown("**:red[Not Safe to Drink]**")
         with st.expander("View Explanation"):
           tab1, tab2 = st.tabs(['Local Explanation Plot', 'Data'])
           with tab1:
