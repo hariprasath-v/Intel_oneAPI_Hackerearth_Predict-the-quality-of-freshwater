@@ -85,9 +85,9 @@ def page1():
           with tab2:
             predictor_df['ypred']=predictor_df['ypred'].map(class_map)
             st.download_button(
-                    label="Download Annotation Data as CSV",
+                    label="Download Detailed Contribution",
                     data=predictor_df.to_csv(),
-                    file_name=f"Freshwater Qualtiy Prediction Contribution For {predictor_df['ypred']}.csv",
+                    file_name=f"Freshwater Qualtiy Prediction Feature Contribution.csv",
                     mime='text/csv')
 
 
