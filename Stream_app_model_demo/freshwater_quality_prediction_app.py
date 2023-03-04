@@ -74,10 +74,10 @@ def page1():
                                             water_temperature,air_temperature]
         predictor.add_input({i:j for i,j in zip(cols,val)})
         predictor_df=predictor.detail_contributions()
-        if predictor_df['ypred']=='1':
-          st.info("<span style='color:blue'>Safe to Drink</span>")
-        elif predictor_df['ypred']=='0':
-          st.info("<span style='color:blue'>Safe to Drink</span>")
+        if predictor_df['ypred']==1:
+          st.info("<span style='color:green'>Safe to Drink</span>")
+        elif predictor_df['ypred']==0:
+          st.info("<span style='color:red'>Not Safe to Drink</span>")
         with st.expander("View Explanation"):
           tab1, tab2 = st.tabs(['Local Explanation Plot', 'Data'])
           with tab1:
