@@ -1,8 +1,13 @@
+import requests
 import streamlit as st
 from shapash import SmartExplainer
 from shapash.explainer.smart_predictor import SmartPredictor
 from shapash.utils.load_smartpredictor import load_smartpredictor
 import pandas as pandas
+import numpy as np
+import catboost
+import dill
+from matplotlib import pyplot as plt
 import plotly.graph_objects as go
 from plotly.graph_objs import *
 
@@ -36,7 +41,8 @@ def explanation_plot(prediction_df):
 
 def page1():
   with st.sidebar:
-    st.title("Predict the Quality of Freshwater")
+    st.title("Freshwater Quality Prediction")
+    st.caption("[Project Source](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater)")
   with st.form(key='my_form'):
       ph=st.number_input(label="Enter pH Value",min_value=1.057113214784995,max_value=12.910718589310344,step=0.01)
       iron=st.number_input(label="Enter Iron(mscg/dl) Value",min_value=-0.00,max_value=19.35314514968547,step=0.01)
