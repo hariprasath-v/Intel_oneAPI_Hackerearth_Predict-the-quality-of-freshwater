@@ -62,30 +62,35 @@ The missing values are imputed by two method.
 #### Xgboost, lightgbm, catboost trained and evaluated with F1 score.
 #### For faster inference models are converted to oneDAL model. 
 #### F1 score comparison
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/F1%20Score%20Comparison.png)
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/F1%20score%20comparison%20dataframe.PNG)
+
 #### Model explained with shapash library
+
 #### Lightgbm model Feature Importances
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/lightgbm%20model%20shapash%20feature%20importances.png)
+
 #### Lightgbm model Local explantion for class 1(safe to drink)
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/lightgbm%20model%20Local%20explantion%20for%20class%201(safe%20to%20drink).png)
 
 #### Catboost model Feature Importances
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/catboost%20model%20shapash%20feature%20importances.png)
+
 #### Catboost model Local explantion for class 1(safe to drink)
+![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/catboost%20model%20Local%20explantion%20for%20class%201(safe%20to%20drink).png)
 
 ### Model demo
 #### For model demo catboost model is used.The demo app created by using the streamlit.
 #### Manual input fields for the columns
 #### Local explanation using shapash smart predictor
+<a href="https://freshwater-quality.streamlit.app">Model Demo App</a>  
  
 
 
 
 ### File information
+
+ av-job-a-thon-november-2022-model.ipynb [![Open in Kaggle](https://img.shields.io/static/v1?label=&message=Open%20in%20Kaggle&labelColor=grey&color=blue&logo=kaggle)](https://www.kaggle.com/hari141v/av-job-a-thon-november-2022-model)
  
- * mh_google_cloud_bigquery_ltv_prediction_challenge_EDA.ipynb [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/155Z7TuAi0AmQhRvGyfVtG-Q4ptO2QmiS?usp=sharing)
-    #### Basic Exploratory Data Analysis
-    #### Packages Used,
-        * google.cloud
-        * seaborn
-        * Pandas
-        * Numpy
-        * Matplotlib
-        * klib
+   
         
