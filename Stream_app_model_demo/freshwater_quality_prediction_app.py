@@ -10,6 +10,8 @@ import dill
 from matplotlib import pyplot as plt
 import plotly.graph_objects as go
 from plotly.graph_objs import *
+st.set_page_config(layout="wide")
+
 
 @st.cache_resource
 def loadModel():
@@ -44,6 +46,7 @@ def page1():
   with st.sidebar:
     st.title("Freshwater Quality Prediction")
     st.caption("[Project Source](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater)")
+    st.caption("[Hariprasath](https://www.linkedin.com/in/hariprasath-v/)")
   with st.form(key='my_form'):
       ph=st.number_input(label="Enter pH Value",min_value=1.057113214784995,max_value=12.910718589310344,step=0.01)
       iron=st.number_input(label="Enter Iron(mscg/dl) Value",min_value=-0.00,max_value=19.35314514968547,step=0.01)
