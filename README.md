@@ -59,7 +59,7 @@ The missing values are imputed by two method.
 
 ### Model
 #### Created stratified train and test dataset from the entire dataset.
-#### Xgboost, lightgbm, catboost trained and evaluated with F1 score.
+#### Xgboost, lightgbm, catboost models are trained and evaluated with F1 score.
 #### For faster inference models are converted to oneDAL model. 
 #### F1 score comparison
 ![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/F1%20Score%20Comparison.png)
