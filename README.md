@@ -58,7 +58,7 @@ The missing values are imputed by two method.
 #### Month, Day, Time of day these features don't have any relevant information for determining the quality of freshwater.
 
 ### Model
-#### Created startified train and test dataset from the entire dataset.
+#### Created stratified train and test dataset from the entire dataset.
 #### Xgboost, lightgbm, catboost trained and evaluated with F1 score.
 #### For faster inference models are converted to oneDAL model. 
 #### F1 score comparison
