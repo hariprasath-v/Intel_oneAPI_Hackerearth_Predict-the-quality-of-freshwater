@@ -90,7 +90,10 @@ The missing values are imputed by two method.
 
 ### File information
 
- av-job-a-thon-november-2022-model.ipynb [![Open in Kaggle](https://img.shields.io/static/v1?label=&message=Open%20in%20Kaggle&labelColor=grey&color=blue&logo=kaggle)](https://www.kaggle.com/hari141v/av-job-a-thon-november-2022-model)
+ predict-the-quality-of-freshwater-model.ipynb[![Open in Kaggle](https://img.shields.io/static/v1?label=&message=Open%20in%20Kaggle&labelColor=grey&color=blue&logo=kaggle)](https://www.kaggle.com/code/hari141v/predict-the-quality-of-freshwater-model)
+ 
+ predict-the-quality-of-freshwater-eda.ipynb[![Open in Kaggle](https://img.shields.io/static/v1?label=&message=Open%20in%20Kaggle&labelColor=grey&color=blue&logo=kaggle)](https://www.kaggle.com/code/hari141v/predict-the-quality-of-freshwater-eda)
+ 
  
    
         
