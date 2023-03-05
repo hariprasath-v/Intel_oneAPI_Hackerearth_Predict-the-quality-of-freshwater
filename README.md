@@ -54,7 +54,25 @@ The missing values are imputed by two method.
 * Water Temperature
 * Air Temperature
 
+#### Color and Source features don't have any interaction with other numerical measures.
+#### Month, Day, Time of day these features don't have any relevant information for determining the quality of freshwater.
 
+### Model
+#### Created startified train and test dataset from the entire dataset.
+#### Xgboost, lightgbm, catboost trained and evaluated with F1 score.
+#### For faster inference models are converted to oneDAL model. 
+#### F1 score comparison
+#### Model explained with shapash library
+#### Lightgbm model Feature Importances
+#### Lightgbm model Local explantion for class 1(safe to drink)
+
+#### Catboost model Feature Importances
+#### Catboost model Local explantion for class 1(safe to drink)
+
+### Model demo
+#### For model demo catboost model is used.The demo app created by using the streamlit.
+#### Manual input fields for the columns
+#### Local explanation using shapash smart predictor
  
 
 
