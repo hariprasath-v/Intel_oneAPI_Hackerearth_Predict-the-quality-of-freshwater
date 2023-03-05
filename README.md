@@ -61,6 +61,7 @@ The missing values are imputed by two method.
 #### Created stratified train and test dataset from the entire dataset.
 #### Xgboost, lightgbm, catboost models are trained and evaluated with F1 score.
 #### For faster inference models are converted to oneDAL model. 
+### <a href="https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Approach%20Intel%20oneAPI%20Predict%20the%20quality%20of%20freshwater.pdf">For more information about the models.</a>    
 #### F1 score comparison
 ![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/F1%20Score%20Comparison.png)
 ![Alt text](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Model%20Interpretation/F1%20score%20comparison%20dataframe.PNG)
