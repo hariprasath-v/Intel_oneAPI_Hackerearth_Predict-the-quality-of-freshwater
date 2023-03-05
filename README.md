@@ -22,16 +22,40 @@ Usage of Intel® oneAPI AI Analtyics toolkits is mandatory to participate.
 
 ### Exploratory Data Analysis
 #### The basic exploratory data analysis of the data,
-    * Missing value analysis
-    * Numerical column distribtution analysis
-    * Interaction between categorical and numerical columns
+* Missing value analysis
+* Numerical column distribtution analysis
+* Interaction between categorical and numerical columns
 #### The above analysis had done by using,
-     * modin(intel) pandas  
-     * numpy
-     * seaborn
-     * matplotlib
-     * missingno
-     * klib
+* modin(intel) pandas  
+* numpy
+* seaborn
+* matplotlib
+* missingno
+* klib
+     
+### Data pre-processing
+The missing values are imputed by two method.
+#### Mean value imputated for following columns,
+* Odor
+* Total Dissolved Solids
+#### Median value imputated for following columns,
+* pH
+* Iron
+* Nitrate
+* Chloride
+* Lead
+* Zinc
+* Turbidity
+* Fluoride
+* Copper
+* Odor
+* Sulfate
+* Conductivity
+* Water Temperature
+* Air Temperature
+
+
+ 
 
 
 
