@@ -27,10 +27,11 @@ class_map={1:"Safe to Drink",0:"Not safe to drink"}
 def explanation_plot(prediction_df,data_df):
   df=prediction_df.drop(['ypred','proba'],axis=1).T.reset_index().rename(columns={'index':'Features',0:'Contribution'}).sort_values(by='Contribution', ascending=True)
   df=df.merge(data_df,on='Features',how='left')
+  texts=df['Features']
   df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,df['Value'].values)]
   df['color']= np.where(df['Contribution']<0, '#f4c000', '#4a628a')
   fig = go.Figure(go.Bar(x=df['Contribution'], y=df['Features'], orientation='h', marker_color=df['color'],
-                       text=df['Features'].str.extract('([a-z|A-Z]+)'),
+                       text=texts,#df['Features'].str.extract('([a-z|A-Z]+)'),
                         hovertemplate="Feature: %{text}<br>Contribution: %{x}"+"<extra></extra>") )
   fig.update_layout(template='plotly_white', title={'text':f"Local Explanation<br><sub>Response:<b>\
   {prediction_df['ypred'].map(class_map)[0]}</b>\
