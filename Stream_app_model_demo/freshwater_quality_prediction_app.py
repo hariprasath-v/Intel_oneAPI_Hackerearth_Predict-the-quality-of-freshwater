@@ -31,7 +31,7 @@ def explanation_plot(prediction_df,data_df):
   df['Features']=[f"{i}: {j}" for i, j in zip(df['Features'].values,df['Value'].values)]
   df['color']= np.where(df['Contribution']<0, '#f4c000', '#4a628a')
   fig = go.Figure(go.Bar(x=df['Contribution'], y=df['Features'], orientation='h', marker_color=df['color'],
-                       text= " ".join(df['Features'].str.extract("([a-z|A-Z]+)")),#   df['Features'].str.extract('([a-z|A-Z]+)'),
+                        text= df['Features'].str.extract('(\w+\s\w+\s?[a-z]+)'),
                         hovertemplate="Feature: %{text}<br>Contribution: %{x}"+"<extra></extra>") )
   fig.update_layout(template='plotly_white', title={'text':f"Local Explanation<br><sub>Response:<b>\
   {prediction_df['ypred'].map(class_map)[0]}</b>\
