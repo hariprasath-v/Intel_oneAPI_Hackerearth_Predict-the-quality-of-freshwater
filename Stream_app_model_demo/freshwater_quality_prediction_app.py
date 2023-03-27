@@ -45,7 +45,7 @@ def explanation_plot(prediction_df,data_df):
 
 def page1():
   with st.sidebar:
-    st.title("Freshwater Quality Prediction")
+    st.title("Freshwater Quality")
     st.caption("[Project Source](https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater)")
     st.caption("[Hariprasath](https://www.linkedin.com/in/hariprasath-v/)")
   with st.form(key='my_form'):
