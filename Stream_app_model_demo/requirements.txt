@@ -1,5 +1,6 @@
 pandas
-numpy==1.23
+numba
+numpy
 catboost
 requests
 shapash
