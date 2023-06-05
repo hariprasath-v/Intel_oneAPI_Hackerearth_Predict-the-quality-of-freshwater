@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r Stream_app_model_demo/requirements.txt
 
       - name: Keep Alive
         run: |
