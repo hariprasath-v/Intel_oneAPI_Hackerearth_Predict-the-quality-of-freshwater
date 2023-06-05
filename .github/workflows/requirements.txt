@@ -1,9 +1,0 @@
-pandas
-numpy==1.21.4
-catboost
-requests
-shapash
-dill
-matplotlib
-plotly
-shap
