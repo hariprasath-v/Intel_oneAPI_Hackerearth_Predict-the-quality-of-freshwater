@@ -11,12 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: |
-          $ cd workflows
-          python -m pip install --upgrade pip
-          pip3 install -r pandas numpy==1.21.4 catboost requests shapash dill matplotlib plotly shap
       - name: Keep Alive
         run: |
           curl --request GET --url https://freshwater-quality.streamlit.app/
