@@ -15,8 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          $ cd Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/Stream_app_model_demo
-          pip3 install -r requirements.txt
+          pip3 install -r https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Stream_app_model_demo/freshwater_quality_prediction_app.py
 
       - name: Keep Alive
         run: |
