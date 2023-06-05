@@ -14,9 +14,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          $ cd workflows
           python -m pip install --upgrade pip
-          pip3 install -r https://github.com/hariprasath-v/Intel_oneAPI_Hackerearth_Predict-the-quality-of-freshwater/blob/main/Stream_app_model_demo/freshwater_quality_prediction_app.py
-
+          pip3 install -r requirements.txt
       - name: Keep Alive
         run: |
           curl --request GET --url https://freshwater-quality.streamlit.app/
