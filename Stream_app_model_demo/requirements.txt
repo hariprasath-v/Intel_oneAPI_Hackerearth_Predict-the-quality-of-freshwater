@@ -1,5 +1,5 @@
 pandas
-streamlit==1.24
+streamlit
 catboost
 requests
 shapash
