@@ -6,4 +6,4 @@ shapash
 dill
 matplotlib
 plotly
-shap
+shap==0.42.0
